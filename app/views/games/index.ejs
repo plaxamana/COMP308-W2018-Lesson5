@@ -26,6 +26,7 @@
             </a>
             <br>
             <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row -->
                 <tr>
                     <th class="text-center">Name</th>
                     <th class="text-center">Cost</th>
@@ -33,10 +34,22 @@
                     <th class="text-center"></th>
                     <th class="text-center"></th>
                 </tr>
+
+                <!-- Template Row -->
+                <% for (let count = 0; count<games.length; count++) { %>
+                    <tr>
+                        <td class="text-centered"><%= games[count].name %></td>
+                        <td class="text-centered"><%= games[count].cost %></td>
+                        <td class="text-centered"><%= games[count].rating %></td>
+                        <td class="text-centered"></td>
+                        <td class="text-centered"></td>
+                    </tr>
+                <% } %>
+
             </table>
 
 
-            
+
         </div>
     </div>
 </div>   
